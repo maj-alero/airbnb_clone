@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb Help Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images/airbnb-logo-removebg-preview.png" type="image/x-icon">
+    <style>
+        body{
+            font-family: 'Nunito', sans-serif;
+        }
+
+        nav{
+            background-color: white;
+        }
+        .header{
+            width: 100vw;
+            height: 400px;
+            text-align: center;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .search{
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            padding: 10px;
+            padding-left: 30px;
+            width: 30vw;
+            height: 70px;
+            text-align: center;
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            background-color: #ddd;
+            border: 1px solid lightgray;
+            border-radius: 50px;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+        }
+        .search i{
+            background-color: #ff385c;
+            color: #fff;
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            
+        }
+        .contact{
+            background: black;
+            color: white;
+            height: 450px;
+            padding: 30px;
+        }
+        .contact-head{
+            margin: 10px 0;
+            margin-left: 150px;
+        }
+        .contact-body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            margin: 10px 0;
+        }
+        .cb-img {
+            width: 330px;
+            height: 300px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            background: #181818;
+        }
+        .cb-img img{
+            width: 100%;
+            height: 220px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        .cb-img div{
+            padding: 10px;
+            line-height: 2px;
+        }
+        .cb-img div h5{
+            font-weight: 500;
+        }
+
+        .get-in-touch{
+            width: 300px;
+        }
+        .get-in-touch span{
+            text-decoration: underline;
+        }
+        
+        .get-in-touch a{
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        footer{
+            background-color: #f3f3f3;
+            padding: 10px;
+        }
+
+        
+        @media screen and (max-width: 750px){
+            .nav-right{
+                display: none;
+            }
+            .nav-con{
+                padding-top: 20px;
+            }
+
+            .search{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 75vw;
+            }
+            .contact{
+                height: 550px;
+            }
+            .contact-body{
+                display: block;
+                height: 100%;
+            }
+            .cb-img{
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: 10px;
+                width: 100%;
+                height: 100px;
+            }
+            .cb-img img{
+                width: 30%;
+                height: 100%;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 10px;
+            }
+            .cb-img div h5 {
+                font-size: 14px;
+            }
+            .cb-img div{
+                font-size: 14px;
+                line-height: 15px;
+                /* align-items: center; */
+            }
+            .get-in-touch{
+                width: 100%;
+                margin-top: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-con">
+        <div class="nav-left">
+            <a href="helpcenter.html">
+                <img src="images/Screenshot 2025-08-14 164834.png" alt="logo">
+            </a>
+            
+        </div>
+        
+        <div class="nav-right">
+            <div class="one">
+                <p>Become a host</p>
+            </div>
+            <div class="two">
+                <i class="bi bi-globe2"></i>
+            </div>
+            <div class="three" id="three">
+                <i class="bi bi-list"></i>
+                <div id="three-content">
+                    <div><a href="">Help Center</a></div>
+                    <hr>
+                    <div><a href="">Refer a host</a></div>
+                    <div><a href="">Find a host</a></div>
+                    <div><a href="">Gift cards</a></div>
+                    <hr>
+                    <div class="openLogin"><a href="login.html" style="text-decoration: none; color: black;">Login or Sign Up</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    </nav>
+    <main>
+        <section class="header">
+            <h1>Hi Amaju, how can we help?</h1>
+            <div class="search">
+                <h5 style="font-weight: 500;">Search how-tos and more</h5>
+                <i class="bi bi-search"></i>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="contact-head">
+                <h3>Explore More</h3>
+            </div>
+            <div class="contact-body">
+                <div class="cb-img">
+                    <img src="images/help-center/community.png" alt="community">
+                    <div>
+                        <h5>Our Community Policies</h5>
+                        <p>How we build a foundation of trust</p>
+                    </div>
+                </div>
+                <div class="cb-img">
+                    <img src="images/help-center/safety-tips.png" alt="safety-tips">
+                    <div>
+                        <h5>Safety tips and guidelines</h5>
+                        <p>Resources to help travellers stay safe</p>
+                    </div>
+                </div>
+                <div class="get-in-touch">
+                    <h4>Need to get in touch?</h4>
+                    <p>We'll start with some questions and get you to the right place.</p>
+                    <a class="btn btn-light w-100" href="contactus.html">Contact Us</a>
+                    <p>You can also <span>give us feedback</span></p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="others">
+
+            <table>
+                <thead>
+                    <th>Support</th>
+                    <th>Hosting</th>
+                    <th>Airbnb</th>
+                </thead>
+                <tr>
+                    <td>Help Center</td>
+                    <td>Airbnb your Home</td>
+                    <td>Newsroom</td>
+                </tr>
+                <tr>
+                    <td>Aircover</td>
+                    <td>Aircover your Hosts</td>
+                    <td>New Features</td>
+                </tr>
+                <tr>
+                    <td>Anti-discrimination</td>
+                    <td>Hosting resources</td>
+                    <td>Careers</td>
+                </tr>
+                <tr>
+                    <td>Disability Support</td>
+                    <td>Comunity Forum</td>
+                    <td>Investors</td>
+                </tr>
+                <tr>
+                    <td>Cancellation options</td>
+                    <td>Hosting responsibly</td>
+                    <td>Gift cards</td>
+                </tr>
+                <tr>
+                    <td>Report neighborhood concern</td>
+                    <td>Airbnb-friendly apartments</td>
+                    <td>Airbnb.org emergency stays</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Join a free Hosting class</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Find a co-host</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="others-resp">
+            <table>
+                <thead>
+                    <th>Support</th>
+                </thead>
+                <tr>
+                    <td>Help Center</td>
+                </tr>
+                <tr>
+                    <td>Air Cover</td>
+                </tr>
+                <tr>
+                    <td>Anti-discrimination</td>
+                </tr>
+                <tr>
+                    <td>Disability Support</td>
+                </tr>
+                <tr>
+                    <td>Cancellation options</td>
+                </tr>
+                <tr>
+                    <td>Report neighborhood concern</td>
+                </tr>
+            </table>
+            <hr style="width: 95%; margin: 40px auto; border: none; height: 1px; background-color: #ccc;">
+            <table>
+                <thead>
+                    <th>Hosting</th>
+                </thead>
+                <tr>
+                    <td>AirBnB your Home</td>
+                </tr>
+                <tr>
+                    <td>Aircover your Hosts</td>
+                </tr>
+                <tr>
+                    <td>Hosting resources</td>
+                </tr>
+                <tr>
+                    <td>Comunity Forum</td>
+                </tr>
+                <tr>
+                    <td>Hosting responsibly</td>
+                </tr>
+                <tr>
+                    <td>Airbnb-friendly apartments</td>
+                </tr>
+                <tr>
+                    <td>Join a free Hosting class</td>
+                </tr>
+                <tr>
+                    <td>Find a Co-host</td>
+                </tr>
+            </table>
+            <hr style="width: 95%; margin: 40px auto; border: none; height: 1px; background-color: #ccc;">
+            <table>
+                <thead>
+                    <th>Airbnb</th>
+                </thead>
+                <tr>
+                    <td>News Room</td>
+                </tr>
+                <tr>
+                    <td>New Features</td>
+                </tr>
+                <tr>
+                    <td>Careers</td>
+                </tr>
+                <tr>
+                    <td>Investors</td>
+                </tr>
+                <tr>
+                    <td>Gift cards</td>
+                </tr>
+                <tr>
+                    <td>Airbnb.org emergency stays</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="last">   
+            <a href="">&copy; 2025 Airbnb, Inc</a>
+            &bull;<a href="">Terms</a>
+            &bull;<a href="">Sitemap</a>
+            &bull;<a href="">Privacy</a>
+            &bull;<a href="">Your Privacy Choices</a>    
+            <span class="right">
+                    <a href=""><i class="bi bi-globe2"></i> ENGLISH (US) </a> 
+                    <a href="">&dollar; USD</a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-twitter-x"></i></a>   
+                    <a href=""><i class="bi bi-instagram"></i></a>   
+            </span> 
+        </div>
+        <div class="last-resp">
+            <p><i class="bi bi-globe2"></i> ENGLISH (US)</p>
+            <p><i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter-x"></i>
+            <i class="bi bi-instagram"></i></p>
+            <p>&copy; 2025 Airbnb, Inc</p>
+            &bull;<a href="">Terms</a>
+            &bull;<a href="">Sitemap</a>
+            &bull;<a href="">Privacy</a>
+            &bull;<a href="">Your Privacy Choices</a>    
+        </div>
+        <hr style="width: 95%; margin: 40px auto; border: none; height: 1px; background-color: #ccc;">
+        <div style="margin: auto;">
+            <h3>Designed by: Ogbe Amaju</h3>
+        </div>
+        </footer>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

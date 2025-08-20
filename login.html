@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="images/airbnb-logo-removebg-preview.png" type="image/x-icon">
+    <style>
+        body{
+            margin: 0;
+        }
+        footer{
+            background-color: #f3f3f3;
+            padding: 10px;
+        }
+        @media screen and (max-width: 1110px) {
+            .login-page-content{
+                width: 70%;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            nav{
+                display: none;
+            }
+            .login-page-content{
+                width: 100%;
+                border: none;
+                margin-top: 10px;
+            }
+            footer{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="lang-currency-popup" >
+    <div id="popup-content">
+        <div >
+        <span id="popup-close">&times;</span>
+        </div>
+        
+        <div id="popup-body">
+        <div id="popup-header">
+            <nav id="popup-nav">
+            <button id="lang-tab" class="active">Language & Region</button>
+            <button id="currency-tab">Currency</button>
+            </nav>
+        </div>
+        <!-- Language & Region Section -->
+        <div id="language-section" class="popup-section">
+            <h3>Choose a Language and Region</h3>
+            <div class="lang-grid">
+                <div class="lang-item"><strong>English</strong><br><small style="color: gray;">United States</small></div>
+        <div class="lang-item"><strong>English</strong><br><small style="color: gray;">United Kingdom</small></div>
+        <div class="lang-item"><strong>Spanish</strong><br><small style="color: gray;">Spain</small></div>
+        <div class="lang-item"><strong>Spanish</strong><br><small style="color: gray;">Mexico</small></div>
+        <div class="lang-item"><strong>French</strong><br><small style="color: gray;">France</small></div>
+        <div class="lang-item"><strong>French</strong><br><small style="color: gray;">Canada</small></div>
+        <div class="lang-item"><strong>German</strong><br><small style="color: gray;">Germany</small></div>
+        <div class="lang-item"><strong>Portuguese</strong><br><small style="color: gray;">Portugal</small></div>
+        <div class="lang-item"><strong>Portuguese</strong><br><small style="color: gray;">Brazil</small></div>
+        <div class="lang-item"><strong>Italian</strong><br><small style="color: gray;">Italy</small></div>
+        <div class="lang-item"><strong>Arabic</strong><br><small style="color: gray;">Egypt</small></div>
+        <div class="lang-item"><strong>Arabic</strong><br><small style="color: gray;">Saudi Arabia</small></div>
+        <div class="lang-item"><strong>Russian</strong><br><small style="color: gray;">Russia</small></div>
+        <div class="lang-item"><strong>Chinese (Simplified)</strong><br><small style="color: gray;">China</small></div>
+        <div class="lang-item"><strong>Chinese (Traditional)</strong><br><small style="color: gray;">Taiwan</small></div>
+        <div class="lang-item"><strong>Japanese</strong><br><small style="color: gray;">Japan</small></div>
+        <div class="lang-item"><strong>Korean</strong><br><small style="color: gray;">South Korea</small></div>
+        <div class="lang-item"><strong>Hindi</strong><br><small style="color: gray;">India</small></div>
+        <div class="lang-item"><strong>Dutch</strong><br><small style="color: gray;">Netherlands</small></div>
+        <div class="lang-item"><strong>Swedish</strong><br><small style="color: gray;">Sweden</small></div>
+        <div class="lang-item"><strong>Danish</strong><br><small style="color: gray;">Denmark</small></div>
+        <div class="lang-item"><strong>Norwegian</strong><br><small style="color: gray;">Norway</small></div>
+        <div class="lang-item"><strong>Finnish</strong><br><small style="color: gray;">Finland</small></div>
+        <div class="lang-item"><strong>Polish</strong><br><small style="color: gray;">Poland</small></div>
+        <div class="lang-item"><strong>Czech</strong><br><small style="color: gray;">Czech Republic</small></div>
+        <div class="lang-item"><strong>Greek</strong><br><small style="color: gray;">Greece</small></div>
+        <div class="lang-item"><strong>Hebrew</strong><br><small style="color: gray;">Israel</small></div>
+        <div class="lang-item"><strong>Turkish</strong><br><small style="color: gray;">Turkey</small></div>
+        <div class="lang-item"><strong>Hungarian</strong><br><small style="color: gray;">Hungary</small></div>
+        <div class="lang-item"><strong>Romanian</strong><br><small style="color: gray;">Romania</small></div>
+        <div class="lang-item"><strong>Bulgarian</strong><br><small style="color: gray;">Bulgaria</small></div>
+        <div class="lang-item"><strong>Indonesian</strong><br><small style="color: gray;">Indonesia</small></div>
+        <div class="lang-item"><strong>Vietnamese</strong><br><small style="color: gray;">Vietnam</small></div>
+        <div class="lang-item"><strong>Thai</strong><br><small style="color: gray;">Thailand</small></div>
+        <div class="lang-item"><strong>Malay</strong><br><small style="color: gray;">Malaysia</small></div>
+        <div class="lang-item"><strong>Filipino</strong><br><small style="color: gray;">Philippines</small></div>
+        <div class="lang-item"><strong>Ukrainian</strong><br><small style="color: gray;">Ukraine</small></div>
+        <div class="lang-item"><strong>Serbian</strong><br><small style="color: gray;">Serbia</small></div>
+        <div class="lang-item"><strong>Croatian</strong><br><small style="color: gray;">Croatia</small></div>
+        <div class="lang-item"><strong>Slovak</strong><br><small style="color: gray;">Slovakia</small></div>
+        <div class="lang-item"><strong>Slovenian</strong><br><small style="color: gray;">Slovenia</small></div>
+        <div class="lang-item"><strong>Estonian</strong><br><small style="color: gray;">Estonia</small></div>
+        <div class="lang-item"><strong>Latvian</strong><br><small style="color: gray;">Latvia</small></div>
+        <div class="lang-item"><strong>Lithuanian</strong><br><small style="color: gray;">Lithuania</small></div>
+        <div class="lang-item"><strong>Azerbaijani</strong><br><small style="color: gray;">Azerbaijan</small></div>
+        <div class="lang-item"><strong>Armenian</strong><br><small style="color: gray;">Armenia</small></div>
+        <div class="lang-item"><strong>Georgian</strong><br><small style="color: gray;">Georgia</small></div>
+        <div class="lang-item"><strong>Kazakh</strong><br><small style="color: gray;">Kazakhstan</small></div>
+        <div class="lang-item"><strong>Uzbek</strong><br><small style="color: gray;">Uzbekistan</small></div>
+        <div class="lang-item"><strong>Swahili</strong><br><small style="color: gray;">Kenya</small></div>
+        <div class="lang-item"><strong>Amharic</strong><br><small style="color: gray;">Ethiopia</small></div>
+        <div class="lang-item"><strong>Afrikaans</strong><br><small style="color: gray;">South Africa</small></div>
+        <div class="lang-item"><strong>Zulu</strong><br><small style="color: gray;">South Africa</small></div>
+        <div class="lang-item"><strong>Bengali</strong><br><small style="color: gray;">Bangladesh</small></div>
+        <div class="lang-item"><strong>Tamil</strong><br><small style="color: gray;">Sri Lanka</small></div>
+        <div class="lang-item"><strong>Nepali</strong><br><small style="color: gray;">Nepal</small></div>
+        <div class="lang-item"><strong>Sinhala</strong><br><small style="color: gray;">Sri Lanka</small></div>
+        <div class="lang-item"><strong>Urdu</strong><br><small style="color: gray;">Pakistan</small></div>
+        <div class="lang-item"><strong>Pashto</strong><br><small style="color: gray;">Afghanistan</small></div>
+        <div class="lang-item"><strong>Kurdish</strong><br><small style="color: gray;">Iraq</small></div>
+        <div class="lang-item"><strong>Persian</strong><br><small style="color: gray;">Iran</small></div>
+        <div class="lang-item"><strong>Bosnian</strong><br><small style="color: gray;">Bosnia</small></div>
+        <div class="lang-item"><strong>Macedonian</strong><br><small style="color: gray;">N. Macedonia</small></div>
+        <div class="lang-item"><strong>Albanian</strong><br><small style="color: gray;">Albania</small></div>
+        <div class="lang-item"><strong>Icelandic</strong><br><small style="color: gray;">Iceland</small></div>
+        <div class="lang-item"><strong>Basque</strong><br><small style="color: gray;">Spain</small></div>
+        <div class="lang-item"><strong>Galician</strong><br><small style="color: gray;">Spain</small></div>
+        <div class="lang-item"><strong>Catalan</strong><br><small style="color: gray;">Spain</small></div>
+        <div class="lang-item"><strong>Luxembourgish</strong><br><small style="color: gray;">Luxembourg</small></div>
+        <div class="lang-item"><strong>Haitian Creole</strong><br><small style="color: gray;">Haiti</small></div>
+        <div class="lang-item"><strong>Quechua</strong><br><small style="color: gray;">Peru</small></div>
+        <div class="lang-item"><strong>Maori</strong><br><small style="color: gray;">New Zealand</small></div>
+        <div class="lang-item"><strong>Samoan</strong><br><small style="color: gray;">Samoa</small></div>
+        <div class="lang-item"><strong>Mongolian</strong><br><small style="color: gray;">Mongolia</small></div>
+        <div class="lang-item"><strong>Khmer</strong><br><small style="color: gray;">Cambodia</small></div>
+        <div class="lang-item"><strong>Lao</strong><br><small style="color: gray;">Laos</small></div>
+        <div class="lang-item"><strong>Burmese</strong><br><small style="color: gray;">Myanmar</small></div>
+        <div class="lang-item"><strong>Tibetan</strong><br><small style="color: gray;">China</small></div>
+        <div class="lang-item"><strong>Yoruba</strong><br><small style="color: gray;">Nigeria</small></div>
+        <div class="lang-item"><strong>Hausa</strong><br><small style="color: gray;">Nigeria</small></div>
+        <div class="lang-item"><strong>Igbo</strong><br><small style="color: gray;">Nigeria</small></div>
+        <div class="lang-item"><strong>Xhosa</strong><br><small style="color: gray;">South Africa</small></div>
+        <div class="lang-item"><strong>Tswana</strong><br><small style="color: gray;">Botswana</small></div>
+        <div class="lang-item"><strong>Malagasy</strong><br><small style="color: gray;">Madagascar</small></div>
+        <div class="lang-item"><strong>Tigrinya</strong><br><small style="color: gray;">Eritrea</small></div>
+        <div class="lang-item"><strong>Wolof</strong><br><small style="color: gray;">Senegal</small></div>
+        <div class="lang-item"><strong>Berber</strong><br><small style="color: gray;">Morocco</small></div>
+        <div class="lang-item"><strong>Dari</strong><br><small style="color: gray;">Afghanistan</small></div>
+        <div class="lang-item"><strong>Greenlandic</strong><br><small style="color: gray;">Greenland</small></div>
+        <div class="lang-item"><strong>Inuktitut</strong><br><small style="color: gray;">Canada</small></div>
+        <div class="lang-item"><strong>Chewa</strong><br><small style="color: gray;">Malawi</small></div>
+            </div>
+        </div>
+
+        <!-- Currency Section -->
+        <div id="currency-section" class="popup-section" style="display: none;">
+            <h3>Choose a Currency</h3>
+            <div class="currency-grid">
+                <div class="currency-item"><strong>United States Dollar</strong><br><small style="color: gray;">USD - $</small></div>
+                <div class="currency-item"><strong>Euro</strong><br><small style="color: gray;">EUR - €</small></div>
+                <div class="currency-item"><strong>British Pound</strong><br><small style="color: gray;">GBP - £</small></div>
+                <div class="currency-item"><strong>Japanese Yen</strong><br><small style="color: gray;">JPY - ¥</small></div>
+                <div class="currency-item"><strong>Chinese Yuan</strong><br><small style="color: gray;">CNY - ¥</small></div>
+                <div class="currency-item"><strong>Indian Rupee</strong><br><small style="color: gray;">INR - ₹</small></div>
+                <div class="currency-item"><strong>Canadian Dollar</strong><br><small style="color: gray;">CAD - $</small></div>
+                <div class="currency-item"><strong>Australian Dollar</strong><br><small style="color: gray;">AUD - $</small></div>
+                <div class="currency-item"><strong>Brazilian Real</strong><br><small style="color: gray;">BRL - R$</small></div>
+                <div class="currency-item"><strong>Swiss Franc</strong><br><small style="color: gray;">CHF - CHF</small></div>
+                <div class="currency-item"><strong>South Korean Won</strong><br><small style="color: gray;">KRW - ₩</small></div>
+                <div class="currency-item"><strong>Mexican Peso</strong><br><small style="color: gray;">MXN - $</small></div>
+                <div class="currency-item"><strong>Russian Ruble</strong><br><small style="color: gray;">RUB - ₽</small></div>
+                <div class="currency-item"><strong>South African Rand</strong><br><small style="color: gray;">ZAR - R</small></div>
+                <div class="currency-item"><strong>Turkish Lira</strong><br><small style="color: gray;">TRY - ₺</small></div>
+                <div class="currency-item"><strong>Singapore Dollar</strong><br><small style="color: gray;">SGD - $</small></div>
+                <div class="currency-item"><strong>New Zealand Dollar</strong><br><small style="color: gray;">NZD - $</small></div>
+                <div class="currency-item"><strong>Swedish Krona</strong><br><small style="color: gray;">SEK - kr</small></div>
+                <div class="currency-item"><strong>Norwegian Krone</strong><br><small style="color: gray;">NOK - kr</small></div>
+                <div class="currency-item"><strong>Danish Krone</strong><br><small style="color: gray;">DKK - kr</small></div>
+                <div class="currency-item"><strong>Polish Zloty</strong><br><small style="color: gray;">PLN - zł</small></div>
+                <div class="currency-item"><strong>Hungarian Forint</strong><br><small style="color: gray;">HUF - Ft</small></div>
+                <div class="currency-item"><strong>Czech Koruna</strong><br><small style="color: gray;">CZK - Kč</small></div>
+                <div class="currency-item"><strong>Israeli Shekel</strong><br><small style="color: gray;">ILS - ₪</small></div>
+                <div class="currency-item"><strong>Indonesian Rupiah</strong><br><small style="color: gray;">IDR - Rp</small></div>
+                <div class="currency-item"><strong>Malaysian Ringgit</strong><br><small style="color: gray;">MYR - RM</small></div>
+                <div class="currency-item"><strong>Philippine Peso</strong><br><small style="color: gray;">PHP - ₱</small></div>
+                <div class="currency-item"><strong>Thai Baht</strong><br><small style="color: gray;">THB - ฿</small></div>
+                <div class="currency-item"><strong>Vietnamese Dong</strong><br><small style="color: gray;">VND - ₫</small></div>
+                <div class="currency-item"><strong>Ukrainian Hryvnia</strong><br><small style="color: gray;">UAH - ₴</small></div>
+                <div class="currency-item"><strong>Argentine Peso</strong><br><small style="color: gray;">ARS - $</small></div>
+                <div class="currency-item"><strong>Chilean Peso</strong><br><small style="color: gray;">CLP - $</small></div>
+                <div class="currency-item"><strong>Colombian Peso</strong><br><small style="color: gray;">COP - $</small></div>
+                <div class="currency-item"><strong>Peruvian Sol</strong><br><small style="color: gray;">PEN - S/</small></div>
+                <div class="currency-item"><strong>Saudi Riyal</strong><br><small style="color: gray;">SAR - ﷼</small></div>
+                <div class="currency-item"><strong>UAE Dirham</strong><br><small style="color: gray;">AED - د.إ</small></div>
+                <div class="currency-item"><strong>Egyptian Pound</strong><br><small style="color: gray;">EGP - £</small></div>
+                <div class="currency-item"><strong>Nigerian Naira</strong><br><small style="color: gray;">NGN - ₦</small></div>
+                <div class="currency-item"><strong>Kenyan Shilling</strong><br><small style="color: gray;">KES - KSh</small></div>
+                <div class="currency-item"><strong>Bangladeshi Taka</strong><br><small style="color: gray;">BDT - ৳</small></div>
+                <div class="currency-item"><strong>Pakistani Rupee</strong><br><small style="color: gray;">PKR - ₨</small></div>
+                <div class="currency-item"><strong>Sri Lankan Rupee</strong><br><small style="color: gray;">LKR - Rs</small></div>
+                <div class="currency-item"><strong>Ghanaian Cedi</strong><br><small style="color: gray;">GHS - ₵</small></div>
+                <div class="currency-item"><strong>Moroccan Dirham</strong><br><small style="color: gray;">MAD - د.م.</small></div>
+                <div class="currency-item"><strong>Tunisian Dinar</strong><br><small style="color: gray;">TND - د.ت</small></div>
+                <div class="currency-item"><strong>Ethiopian Birr</strong><br><small style="color: gray;">ETB - Br</small></div>
+                    
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+    <div id="host-popup">
+    <div id="host-content">
+        <div id="host-header">
+            <span id="closeHost">&times;</span>
+        </div>
+        <div id="host-body">
+            <h2>What would you like to host</h2>
+            <div id="options">
+                <div id="home-option"><img src="images/home-removebg-preview.png" alt="home logo"><p>Home</p></div>
+                <div id="exp-option"><img src="images/experience-removebg-preview.png" alt="experience logo"><p>Experience</p></div>
+                <div id="serv-option"><img src="images/services-removebg-preview.png" alt="service logo"><p>Service</p></div>
+            </div>
+        </div>
+        <div id="host-footer">
+            <button class="btn btn-secondary" id="next-btn">Next</button>
+        </div>
+    </div>
+</div>
+    <nav id="login-nav">
+        <div class="login-nav-con">
+        <div class="nav-left">
+            <a href="index.html">
+                <img src="images/logo-removebg-preview.png" alt="logo">
+            </a>
+            
+        </div>
+        
+        <div class="nav-right">
+            <div class="one" id="one">
+                <p>Become a host</p>
+            </div>
+            <div class="two" id="open-lang-currency">
+                <i class="bi bi-globe2"></i>
+            </div>
+            <div class="three" id="three">
+                <i class="bi bi-list"></i>
+                <div id="three-content">
+                    <div><a href="helpcenter.html">Help Center</a></div>
+                    <hr>
+                    <div><a href="">Refer a host</a></div>
+                    <div><a href="">Find a host</a></div>
+                    <div><a href="">Gift cards</a></div>
+                    <hr>
+                    <div class="openLogin">Login or Sign Up</div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    </nav>
+        <div class="login-page-content" >
+            <div id="login-page-header">
+                <h6>Login or Sign Up</h6>
+            </div>
+            <div id="login-page-body">
+            <form action="" method="post">
+                <h3>Welcome to AirBnB</h3>
+                <div class="form-floating mb-3"> 
+                    <select name="countryCode" id="floatingSelect" class="form-select">
+                        <option data-countryCode="DZ" value="213">Algeria (+213)</option>
+                        <option data-countryCode="AD" value="376">Andorra (+376)</option>
+                        <option data-countryCode="AO" value="244">Angola (+244)</option>
+                        <option data-countryCode="AI" value="1264">Anguilla (+1264)</option>
+                        <option data-countryCode="AG" value="1268">Antigua &amp; Barbuda (+1268)</option>
+                        <option data-countryCode="AR" value="54">Argentina (+54)</option>
+                        <option data-countryCode="AM" value="374">Armenia (+374)</option>
+                        <option data-countryCode="AW" value="297">Aruba (+297)</option>
+                        <option data-countryCode="AU" value="61">Australia (+61)</option>
+                        <option data-countryCode="AT" value="43">Austria (+43)</option>
+                        <option data-countryCode="AZ" value="994">Azerbaijan (+994)</option>
+                        <option data-countryCode="BS" value="1242">Bahamas (+1242)</option>
+                        <option data-countryCode="BH" value="973">Bahrain (+973)</option>
+                        <option data-countryCode="BD" value="880">Bangladesh (+880)</option>
+                        <option data-countryCode="BB" value="1246">Barbados (+1246)</option>
+                        <option data-countryCode="BY" value="375">Belarus (+375)</option>
+                        <option data-countryCode="BE" value="32">Belgium (+32)</option>
+                        <option data-countryCode="BZ" value="501">Belize (+501)</option>
+                        <option data-countryCode="BJ" value="229">Benin (+229)</option>
+                        <option data-countryCode="BM" value="1441">Bermuda (+1441)</option>
+                        <option data-countryCode="BT" value="975">Bhutan (+975)</option>
+                        <option data-countryCode="BO" value="591">Bolivia (+591)</option>
+                        <option data-countryCode="BA" value="387">Bosnia Herzegovina (+387)</option>
+                        <option data-countryCode="BW" value="267">Botswana (+267)</option>
+                        <option data-countryCode="BR" value="55">Brazil (+55)</option>
+                        <option data-countryCode="BN" value="673">Brunei (+673)</option>
+                        <option data-countryCode="BG" value="359">Bulgaria (+359)</option>
+                        <option data-countryCode="BF" value="226">Burkina Faso (+226)</option>
+                        <option data-countryCode="BI" value="257">Burundi (+257)</option>
+                        <option data-countryCode="KH" value="855">Cambodia (+855)</option>
+                        <option data-countryCode="CM" value="237">Cameroon (+237)</option>
+                        <option data-countryCode="CA" value="1">Canada (+1)</option>
+                        <option data-countryCode="CV" value="238">Cape Verde Islands (+238)</option>
+                        <option data-countryCode="KY" value="1345">Cayman Islands (+1345)</option>
+                        <option data-countryCode="CF" value="236">Central African Republic (+236)</option>
+                        <option data-countryCode="CL" value="56">Chile (+56)</option>
+                        <option data-countryCode="CN" value="86">China (+86)</option>
+                        <option data-countryCode="CO" value="57">Colombia (+57)</option>
+                        <option data-countryCode="KM" value="269">Comoros (+269)</option>
+                        <option data-countryCode="CG" value="242">Congo (+242)</option>
+                        <option data-countryCode="CK" value="682">Cook Islands (+682)</option>
+                        <option data-countryCode="CR" value="506">Costa Rica (+506)</option>
+                        <option data-countryCode="HR" value="385">Croatia (+385)</option>
+                        <option data-countryCode="CU" value="53">Cuba (+53)</option>
+                        <option data-countryCode="CY" value="90392">Cyprus North (+90392)</option>
+                        <option data-countryCode="CY" value="357">Cyprus South (+357)</option>
+                        <option data-countryCode="CZ" value="42">Czech Republic (+42)</option>
+                        <option data-countryCode="DK" value="45">Denmark (+45)</option>
+                        <option data-countryCode="DJ" value="253">Djibouti (+253)</option>
+                        <option data-countryCode="DM" value="1809">Dominica (+1809)</option>
+                        <option data-countryCode="DO" value="1809">Dominican Republic (+1809)</option>
+                        <option data-countryCode="EC" value="593">Ecuador (+593)</option>
+                        <option data-countryCode="EG" value="20">Egypt (+20)</option>
+                        <option data-countryCode="SV" value="503">El Salvador (+503)</option>
+                        <option data-countryCode="GQ" value="240">Equatorial Guinea (+240)</option>
+                        <option data-countryCode="ER" value="291">Eritrea (+291)</option>
+                        <option data-countryCode="EE" value="372">Estonia (+372)</option>
+                        <option data-countryCode="ET" value="251">Ethiopia (+251)</option>
+                        <option data-countryCode="FK" value="500">Falkland Islands (+500)</option>
+                        <option data-countryCode="FO" value="298">Faroe Islands (+298)</option>
+                        <option data-countryCode="FJ" value="679">Fiji (+679)</option>
+                        <option data-countryCode="FI" value="358">Finland (+358)</option>
+                        <option data-countryCode="FR" value="33">France (+33)</option>
+                        <option data-countryCode="GF" value="594">French Guiana (+594)</option>
+                        <option data-countryCode="PF" value="689">French Polynesia (+689)</option>
+                        <option data-countryCode="GA" value="241">Gabon (+241)</option>
+                        <option data-countryCode="GM" value="220">Gambia (+220)</option>
+                        <option data-countryCode="GE" value="7880">Georgia (+7880)</option>
+                        <option data-countryCode="DE" value="49">Germany (+49)</option>
+                        <option data-countryCode="GH" value="233">Ghana (+233)</option>
+                        <option data-countryCode="GI" value="350">Gibraltar (+350)</option>
+                        <option data-countryCode="GR" value="30">Greece (+30)</option>
+                        <option data-countryCode="GL" value="299">Greenland (+299)</option>
+                        <option data-countryCode="GD" value="1473">Grenada (+1473)</option>
+                        <option data-countryCode="GP" value="590">Guadeloupe (+590)</option>
+                        <option data-countryCode="GU" value="671">Guam (+671)</option>
+                        <option data-countryCode="GT" value="502">Guatemala (+502)</option>
+                        <option data-countryCode="GN" value="224">Guinea (+224)</option>
+                        <option data-countryCode="GW" value="245">Guinea - Bissau (+245)</option>
+                        <option data-countryCode="GY" value="592">Guyana (+592)</option>
+                        <option data-countryCode="HT" value="509">Haiti (+509)</option>
+                        <option data-countryCode="HN" value="504">Honduras (+504)</option>
+                        <option data-countryCode="HK" value="852">Hong Kong (+852)</option>
+                        <option data-countryCode="HU" value="36">Hungary (+36)</option>
+                        <option data-countryCode="IS" value="354">Iceland (+354)</option>
+                        <option data-countryCode="IN" value="91">India (+91)</option>
+                        <option data-countryCode="ID" value="62">Indonesia (+62)</option>
+                        <option data-countryCode="IR" value="98">Iran (+98)</option>
+                        <option data-countryCode="IQ" value="964">Iraq (+964)</option>
+                        <option data-countryCode="IE" value="353">Ireland (+353)</option>
+                        <option data-countryCode="IL" value="972">Israel (+972)</option>
+                        <option data-countryCode="IT" value="39">Italy (+39)</option>
+                        <option data-countryCode="JM" value="1876">Jamaica (+1876)</option>
+                        <option data-countryCode="JP" value="81">Japan (+81)</option>
+                        <option data-countryCode="JO" value="962">Jordan (+962)</option>
+                        <option data-countryCode="KZ" value="7">Kazakhstan (+7)</option>
+                        <option data-countryCode="KE" value="254">Kenya (+254)</option>
+                        <option data-countryCode="KI" value="686">Kiribati (+686)</option>
+                        <option data-countryCode="KP" value="850">Korea North (+850)</option>
+                        <option data-countryCode="KR" value="82">Korea South (+82)</option>
+                        <option data-countryCode="KW" value="965">Kuwait (+965)</option>
+                        <option data-countryCode="KG" value="996">Kyrgyzstan (+996)</option>
+                        <option data-countryCode="LA" value="856">Laos (+856)</option>
+                        <option data-countryCode="LV" value="371">Latvia (+371)</option>
+                        <option data-countryCode="LB" value="961">Lebanon (+961)</option>
+                        <option data-countryCode="LS" value="266">Lesotho (+266)</option>
+                        <option data-countryCode="LR" value="231">Liberia (+231)</option>
+                        <option data-countryCode="LY" value="218">Libya (+218)</option>
+                        <option data-countryCode="LI" value="417">Liechtenstein (+417)</option>
+                        <option data-countryCode="LT" value="370">Lithuania (+370)</option>
+                        <option data-countryCode="LU" value="352">Luxembourg (+352)</option>
+                        <option data-countryCode="MO" value="853">Macao (+853)</option>
+                        <option data-countryCode="MK" value="389">Macedonia (+389)</option>
+                        <option data-countryCode="MG" value="261">Madagascar (+261)</option>
+                        <option data-countryCode="MW" value="265">Malawi (+265)</option>
+                        <option data-countryCode="MY" value="60">Malaysia (+60)</option>
+                        <option data-countryCode="MV" value="960">Maldives (+960)</option>
+                        <option data-countryCode="ML" value="223">Mali (+223)</option>
+                        <option data-countryCode="MT" value="356">Malta (+356)</option>
+                        <option data-countryCode="MH" value="692">Marshall Islands (+692)</option>
+                        <option data-countryCode="MQ" value="596">Martinique (+596)</option>
+                        <option data-countryCode="MR" value="222">Mauritania (+222)</option>
+                        <option data-countryCode="YT" value="269">Mayotte (+269)</option>
+                        <option data-countryCode="MX" value="52">Mexico (+52)</option>
+                        <option data-countryCode="FM" value="691">Micronesia (+691)</option>
+                        <option data-countryCode="MD" value="373">Moldova (+373)</option>
+                        <option data-countryCode="MC" value="377">Monaco (+377)</option>
+                        <option data-countryCode="MN" value="976">Mongolia (+976)</option>
+                        <option data-countryCode="MS" value="1664">Montserrat (+1664)</option>
+                        <option data-countryCode="MA" value="212">Morocco (+212)</option>
+                        <option data-countryCode="MZ" value="258">Mozambique (+258)</option>
+                        <option data-countryCode="MN" value="95">Myanmar (+95)</option>
+                        <option data-countryCode="NA" value="264">Namibia (+264)</option>
+                        <option data-countryCode="NR" value="674">Nauru (+674)</option>
+                        <option data-countryCode="NP" value="977">Nepal (+977)</option>
+                        <option data-countryCode="NL" value="31">Netherlands (+31)</option>
+                        <option data-countryCode="NC" value="687">New Caledonia (+687)</option>
+                        <option data-countryCode="NZ" value="64">New Zealand (+64)</option>
+                        <option data-countryCode="NI" value="505">Nicaragua (+505)</option>
+                        <option data-countryCode="NE" value="227">Niger (+227)</option>
+                        <option data-countryCode="NG" value="234" selected>Nigeria (+234)</option>
+                        <option data-countryCode="NU" value="683">Niue (+683)</option>
+                        <option data-countryCode="NF" value="672">Norfolk Islands (+672)</option>
+                        <option data-countryCode="NP" value="670">Northern Marianas (+670)</option>
+                        <option data-countryCode="NO" value="47">Norway (+47)</option>
+                        <option data-countryCode="OM" value="968">Oman (+968)</option>
+                        <option data-countryCode="PW" value="680">Palau (+680)</option>
+                        <option data-countryCode="PA" value="507">Panama (+507)</option>
+                        <option data-countryCode="PG" value="675">Papua New Guinea (+675)</option>
+                        <option data-countryCode="PY" value="595">Paraguay (+595)</option>
+                        <option data-countryCode="PE" value="51">Peru (+51)</option>
+                        <option data-countryCode="PH" value="63">Philippines (+63)</option>
+                        <option data-countryCode="PL" value="48">Poland (+48)</option>
+                        <option data-countryCode="PT" value="351">Portugal (+351)</option>
+                        <option data-countryCode="PR" value="1787">Puerto Rico (+1787)</option>
+                        <option data-countryCode="QA" value="974">Qatar (+974)</option>
+                        <option data-countryCode="RE" value="262">Reunion (+262)</option>
+                        <option data-countryCode="RO" value="40">Romania (+40)</option>
+                        <option data-countryCode="RU" value="7">Russia (+7)</option>
+                        <option data-countryCode="RW" value="250">Rwanda (+250)</option>
+                        <option data-countryCode="SM" value="378">San Marino (+378)</option>
+                        <option data-countryCode="ST" value="239">Sao Tome &amp; Principe (+239)</option>
+                        <option data-countryCode="SA" value="966">Saudi Arabia (+966)</option>
+                        <option data-countryCode="SN" value="221">Senegal (+221)</option>
+                        <option data-countryCode="CS" value="381">Serbia (+381)</option>
+                        <option data-countryCode="SC" value="248">Seychelles (+248)</option>
+                        <option data-countryCode="SL" value="232">Sierra Leone (+232)</option>
+                        <option data-countryCode="SG" value="65">Singapore (+65)</option>
+                        <option data-countryCode="SK" value="421">Slovak Republic (+421)</option>
+                        <option data-countryCode="SI" value="386">Slovenia (+386)</option>
+                        <option data-countryCode="SB" value="677">Solomon Islands (+677)</option>
+                        <option data-countryCode="SO" value="252">Somalia (+252)</option>
+                        <option data-countryCode="ZA" value="27">South Africa (+27)</option>
+                        <option data-countryCode="ES" value="34">Spain (+34)</option>
+                        <option data-countryCode="LK" value="94">Sri Lanka (+94)</option>
+                        <option data-countryCode="SH" value="290">St. Helena (+290)</option>
+                        <option data-countryCode="KN" value="1869">St. Kitts (+1869)</option>
+                        <option data-countryCode="SC" value="1758">St. Lucia (+1758)</option>
+                        <option data-countryCode="SD" value="249">Sudan (+249)</option>
+                        <option data-countryCode="SR" value="597">Suriname (+597)</option>
+                        <option data-countryCode="SZ" value="268">Swaziland (+268)</option>
+                        <option data-countryCode="SE" value="46">Sweden (+46)</option>
+                        <option data-countryCode="CH" value="41">Switzerland (+41)</option>
+                        <option data-countryCode="SI" value="963">Syria (+963)</option>
+                        <option data-countryCode="TW" value="886">Taiwan (+886)</option>
+                        <option data-countryCode="TJ" value="7">Tajikstan (+7)</option>
+                        <option data-countryCode="TH" value="66">Thailand (+66)</option>
+                        <option data-countryCode="TG" value="228">Togo (+228)</option>
+                        <option data-countryCode="TO" value="676">Tonga (+676)</option>
+                        <option data-countryCode="TT" value="1868">Trinidad &amp; Tobago (+1868)</option>
+                        <option data-countryCode="TN" value="216">Tunisia (+216)</option>
+                        <option data-countryCode="TR" value="90">Turkey (+90)</option>
+                        <option data-countryCode="TM" value="7">Turkmenistan (+7)</option>
+                        <option data-countryCode="TM" value="993">Turkmenistan (+993)</option>
+                        <option data-countryCode="TC" value="1649">Turks &amp; Caicos Islands (+1649)</option>
+                        <option data-countryCode="TV" value="688">Tuvalu (+688)</option>
+                        <option data-countryCode="UG" value="256">Uganda (+256)</option>
+                        <option data-countryCode="GB" value="44">UK (+44)</option>
+                        <option data-countryCode="UA" value="380">Ukraine (+380)</option>
+                        <option data-countryCode="AE" value="971">United Arab Emirates (+971)</option>
+                        <option data-countryCode="UY" value="598">Uruguay (+598)</option>
+                        <option data-countryCode="US" value="1">USA (+1)</option>
+                        <option data-countryCode="UZ" value="7">Uzbekistan (+7)</option>
+                        <option data-countryCode="VU" value="678">Vanuatu (+678)</option>
+                        <option data-countryCode="VA" value="379">Vatican City (+379)</option>
+                        <option data-countryCode="VE" value="58">Venezuela (+58)</option>
+                        <option data-countryCode="VN" value="84">Vietnam (+84)</option>
+                        <option data-countryCode="VG" value="84">Virgin Islands - British (+1284)</option>
+                        <option data-countryCode="VI" value="84">Virgin Islands - US (+1340)</option>
+                        <option data-countryCode="WF" value="681">Wallis &amp; Futuna (+681)</option>
+                        <option data-countryCode="YE" value="969">Yemen (North)(+969)</option>
+                        <option data-countryCode="YE" value="967">Yemen (South)(+967)</option>
+                        <option data-countryCode="ZM" value="260">Zambia (+260)</option>
+                        <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
+                    
+                    </select>
+                    <label for="floatingSelect">Country Code</label>
+                </div>
+                <div class="form-floating">
+                    <input type="tel" name="phone" id="floatingInput" class="form-control" placeholder="Phone Number">
+                    <label for="floatingInput">Phone Number</label>
+                </div>
+
+                <div class="small my-2">
+                    <small>We’ll call or text you to confirm your number. Standard message and data rates apply.</small><br>
+                    <small><a href="" style="color: black;">Privacy Policy</a></small>
+                </div>
+
+                <button type="submit" style="background-color: #ff385c; color: white;" class="btn w-100 fw-bold fs-7">Continue</button>
+            </form>
+            <div class="divider">
+                <hr>
+                <small>or</small>
+                <hr>
+            </div>
+            
+
+            <div>
+                <button class="button"><img width="25" height="25" src="https://img.icons8.com/color/48/google-logo.png" alt="google-logo"/>Continue with Google</button>
+                <button class="button"><img width="25" height="25" src="https://img.icons8.com/ios-filled/50/mac-os.png" alt="mac-os"/>Continue with Apple</button>
+                <button class="button"><img width="25" height="25" src="https://img.icons8.com/material-outlined/24/mail.png" alt="mail"/>Continue with Email</button>
+                <button class="button"><img width="25" height="25" src="https://img.icons8.com/color/48/facebook-new.png" alt="facebook-new"/>Continue with Facebook</button>
+            </div>
+            </div>
+        </div>
+        <div class="bottom-nav">
+            <div class="bn-item"><a href="index.html"><i class="bi bi-search"></i><p>Explore</p></a></div>
+            <div class="bn-item"><a href=""><i class="bi bi-heart"></i><p>Wishlist</p></a></div>
+            <div class="bn-item"><a href=""><i class="bi bi-person-circle"></i><p>Log In</p></a></div>
+        </div>
+        <footer>
+            <div class="others">
+
+            <table>
+                <thead>
+                    <th>Support</th>
+                    <th>Hosting</th>
+                    <th>Airbnb</th>
+                </thead>
+                <tr>
+                    <td>Help Center</td>
+                    <td>Airbnb your Home</td>
+                    <td>Newsroom</td>
+                </tr>
+                <tr>
+                    <td>Aircover</td>
+                    <td>Aircover your Hosts</td>
+                    <td>New Features</td>
+                </tr>
+                <tr>
+                    <td>Anti-discrimination</td>
+                    <td>Hosting resources</td>
+                    <td>Careers</td>
+                </tr>
+                <tr>
+                    <td>Disability Support</td>
+                    <td>Comunity Forum</td>
+                    <td>Investors</td>
+                </tr>
+                <tr>
+                    <td>Cancellation options</td>
+                    <td>Hosting responsibly</td>
+                    <td>Gift cards</td>
+                </tr>
+                <tr>
+                    <td>Report neighborhood concern</td>
+                    <td>Airbnb-friendly apartments</td>
+                    <td>Airbnb.org emergency stays</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Join a free Hosting class</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Find a co-host</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="others-resp">
+            <table>
+                <thead>
+                    <th>Support</th>
+                </thead>
+                <tr>
+                    <td>Help Center</td>
+                </tr>
+                <tr>
+                    <td>Air Cover</td>
+                </tr>
+                <tr>
+                    <td>Anti-discrimination</td>
+                </tr>
+                <tr>
+                    <td>Disability Support</td>
+                </tr>
+                <tr>
+                    <td>Cancellation options</td>
+                </tr>
+                <tr>
+                    <td>Report neighborhood concern</td>
+                </tr>
+            </table>
+            <hr style="width: 95%; margin: 40px auto; border: none; height: 1px; background-color: #ccc;">
+            <table>
+                <thead>
+                    <th>Hosting</th>
+                </thead>
+                <tr>
+                    <td>AirBnB your Home</td>
+                </tr>
+                <tr>
+                    <td>Aircover your Hosts</td>
+                </tr>
+                <tr>
+                    <td>Hosting resources</td>
+                </tr>
+                <tr>
+                    <td>Comunity Forum</td>
+                </tr>
+                <tr>
+                    <td>Hosting responsibly</td>
+                </tr>
+                <tr>
+                    <td>Airbnb-friendly apartments</td>
+                </tr>
+                <tr>
+                    <td>Join a free Hosting class</td>
+                </tr>
+                <tr>
+                    <td>Find a Co-host</td>
+                </tr>
+            </table>
+            <hr style="width: 95%; margin: 40px auto; border: none; height: 1px; background-color: #ccc;">
+            <table>
+                <thead>
+                    <th>Airbnb</th>
+                </thead>
+                <tr>
+                    <td>News Room</td>
+                </tr>
+                <tr>
+                    <td>New Features</td>
+                </tr>
+                <tr>
+                    <td>Careers</td>
+                </tr>
+                <tr>
+                    <td>Investors</td>
+                </tr>
+                <tr>
+                    <td>Gift cards</td>
+                </tr>
+                <tr>
+                    <td>Airbnb.org emergency stays</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="last">   
+            <a href="">&copy; 2025 Airbnb, Inc</a>
+            &bull;<a href="">Terms</a>
+            &bull;<a href="">Sitemap</a>
+            &bull;<a href="">Privacy</a>
+            &bull;<a href="">Your Privacy Choices</a>    
+            <span class="right">
+                    <a href=""><i class="bi bi-globe2"></i> ENGLISH (US) </a> 
+                    <a href="">&dollar; USD</a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-twitter-x"></i></a>   
+                    <a href=""><i class="bi bi-instagram"></i></a>   
+            </span> 
+        </div>
+        <div class="last-resp">
+            <p><i class="bi bi-globe2"></i> ENGLISH (US)</p>
+            <p><i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter-x"></i>
+            <i class="bi bi-instagram"></i></p>
+            <p>&copy; 2025 Airbnb, Inc</p>
+            &bull;<a href="">Terms</a>
+            &bull;<a href="">Sitemap</a>
+            &bull;<a href="">Privacy</a>
+            &bull;<a href="">Your Privacy Choices</a>    
+        </div>
+        <hr style="width: 95%; margin: 40px auto; border: none; height: 1px; background-color: #ccc;">
+        <div style="margin: auto;">
+            <h3>Designed by: Ogbe Amaju</h3>
+        </div>
+        </footer>
+        <script src="scripts.js"></script>
+</body>
+
+</html>

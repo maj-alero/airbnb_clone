@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images/airbnb-logo-removebg-preview.png" type="image/x-icon">
+    <style>
+        body{
+            font-family: 'Nunito', sans-serif;
+        }
+        .chat-container {
+            display: grid;
+            grid-template-columns: 350px 1fr 300px;
+            height: calc(100vh - 85px);
+            overflow-y: hidden;
+        }
+        /* Sidebar */
+        .sidebar {
+            border-right: 1px solid #ddd;
+            padding: 10px 0;
+            
+        }
+        .sidebar-header{
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #sidebar-head1{
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        #sidebar-head1 h4{
+            font-weight: bold;
+        }
+
+        .right i{ 
+            margin-right: 5px;
+            padding: 10px;
+            border: none;
+            background: #f0f0f0;
+            border-radius: 20px;
+        }
+
+        .sidebar-btn{
+            display: flex;
+        }
+
+        .filter-btn {
+            margin-right: 5px;
+            padding: 10px 15px;
+            border: none;
+            color: white;
+            background: #000000;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: smaller;
+        }
+        #all{
+            position: relative;
+        }
+
+        .all-content{
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 200px;
+            background-color: white;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+        }
+        .all-content p{
+            padding: 10px;
+        }
+        .all-content p:hover{
+            background-color: #ddd;
+        }
+
+        #all.show .all-content{
+            display: block;
+        }
+
+
+        .message-list {
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        .message-title{
+            font-weight: bold;
+        }
+
+        .message-item {
+            display: flex;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .message-item:hover {
+            background: #f5f5f5;
+        }
+
+        .message-item.active {
+            background: #f0f0f0;
+        }
+
+        
+        .avatar-icon img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 0 10px;
+        }
+
+        .message-info p {
+            margin: 2px 0;
+        }
+
+        /* Chat Section */
+        .chat {
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid #ddd;
+        }
+
+        .chat-header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .chat-header h4{
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .chat-header img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: 0 10px;
+        }
+
+        .chat-body {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+        }
+
+        .chat-message {
+            background: #f7f7f7;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border-bottom-left-radius: 0;
+            width: 80%;
+        }
+
+        .chat-input {
+            position: relative;
+            display: inline-block;
+            padding: 1px 10px;
+            padding-left: 1px;
+            margin: 10px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 0 10px;
+            height: 100px;
+            border: 1px solid black;
+            border-radius: 20px ;
+            color: black;
+            width: 100%;
+        }
+        
+
+        .chat-input button {
+            position: absolute;
+            bottom: 8px; 
+            right: 20px;  
+            /* background: #ff385c; */
+            background: #ddd;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 5px 15px;
+            height: 40px;
+            cursor: pointer;
+        }
+        .chat-input button:hover{
+            background: black;
+        }
+
+        /* Details */
+        .details {
+            padding: 15px 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .details-header{
+            border-bottom: 1px solid #ddd;
+            padding: 14px 10px;
+        }
+        .details-header h4{
+            font-weight: bold;
+            color: #000000;
+        }
+        .details-body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px 0;
+            margin: 0 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .details-body img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .details-body p{
+            color: #000000;
+            margin: auto;
+        }
+        @media screen and (max-width: 1130px){
+            .details{
+                display: none;
+            }
+            .chat-container{
+                grid-template-columns: 350px 1fr 0;
+            }
+        }
+        @media screen and (max-width: 745px) {
+            nav{
+                display: none;
+            }
+            .sidebar,.details{
+                display: none;
+            }
+            .chat-container{
+                height: 100vh;
+            }
+            .chat{
+                height: 100vh;
+                width: 100vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="host-popup">
+    <div id="host-content">
+        <div id="host-header">
+            <span id="closeHost">&times;</span>
+        </div>
+        <div id="host-body">
+            <h2>What would you like to host</h2>
+            <div id="options">
+                <div id="home-option"><img src="images/home-removebg-preview.png" alt="home logo"><p>Home</p></div>
+                <div id="exp-option"><img src="images/experience-removebg-preview.png" alt="experience logo"><p>Experience</p></div>
+                <div id="serv-option"><img src="images/services-removebg-preview.png" alt="service logo"><p>Service</p></div>
+            </div>
+        </div>
+        <div id="host-footer">
+            <button class="btn btn-secondary" id="next-btn">Next</button>
+        </div>
+    </div>
+</div>
+    <nav id="main-nav">
+        <div class="nav-con">
+        <div class="nav-left">
+            <a href="index.html">
+                <img src="images/logo-removebg-preview.png" alt="logo">
+            </a>
+            
+        </div>
+        
+        <div class="nav-right">
+            <div class="one">
+                <p>Become a host</p>
+            </div>
+            <div class="two">
+                <i class="bi bi-globe2"></i>
+            </div>
+            <div class="three" id="three">
+                <i class="bi bi-list"></i>
+                <div id="three-content">
+                    <div><a href="helpcenter.html">Help Center</a></div>
+                    <hr>
+                    <div><a href="">Refer a host</a></div>
+                    <div><a href="">Find a host</a></div>
+                    <div><a href="">Gift cards</a></div>
+                    <hr>
+                    <div class="openLogin"><a href="login.html" style="text-decoration: none; color: black;">Login or Sign Up</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    </nav>
+    
+    
+    <main class="chat-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div id="sidebar-head1">
+                    <h4>Messages</h4>
+                    <div class="right">
+                        <i class="bi bi-search"></i>
+                        <i class="bi bi-gear"></i>
+                    </div>
+                </div>
+                
+                <div class="sidebar-btn">
+                    <div id="all">
+                        <button class="filter-btn">All <span>&blacktriangledown;</span></button>
+                        <div class="all-content">
+                            <p>All</p>
+                            <p>Traveling</p>
+                            <p>Support</p>
+                        </div>
+                    </div>
+                    <button class="filter-btn">Unread</button>
+                </div>
+            </div>
+            <div class="message-list">
+                <div class="message-item active">
+                    <div class="avatar-icon"><img src="images/airbnb-black-logo.png" alt="logo"></div>
+                    <div class="message-info">
+                        <p class="message-title">Airbnb Support</p>
+                        <p class="message-preview">Can you describe your issue in a few...</p>
+                        <span class="message-time">Ongoing</span>
+                    </div>
+                </div>
+                
+            </div>
+        </aside>
+
+        <!-- Chat Area -->
+        <section class="chat">
+            <div class="chat-header">
+                <img src="images/airbnb-black-logo.png" alt="logo">
+                <h4>Airbnb Support</h4>
+            </div>
+            <div class="chat-body">
+                <div class="chat-message">
+                    <p><strong>Hi Amaju</strong>, let’s get you help. We’re going to ask you some questions and then connect you with a member of our team.</p>
+                </div>
+                <div class="chat-message">
+                    <p>Can you describe your issue in a few sentences? This will help our team understand what’s going on.</p>
+                    <p><small>Please don’t include sensitive info like credit card numbers.</small></p>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Write a message...">
+                <button class="">➤</button>
+            </div>
+        </section>
+
+        <!-- Details Panel -->
+        <aside class="details">
+            <div class="details-header">
+                <h4>Details</h4>
+            </div>
+            <div class="details-body">
+                <img src="images/airbnb-black-logo.png" alt="logo">
+                <p>Get help from a member of our team.</p>
+            </div>
+            
+        </aside>
+    </main>
+
+    <script src="scripts.js"></script>
+    <script>
+        const showAll = document.querySelector('#all');
+            showAll.addEventListener("click", function (e) {
+                e.stopPropagation();
+                showAll.classList.toggle("show");
+            });
+            window.addEventListener("click", function () {
+                menu[index].classList.remove("show");
+            });
+    </script>
+</body>
+
+</html>
