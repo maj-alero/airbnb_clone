@@ -1115,3 +1115,9 @@ body{
 
 }
 
+@media screen and (max-width: 500px) {
+    #resp-nav-item{
+       gap: 20px;
+    }
+}
+
