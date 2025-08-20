@@ -58,9 +58,7 @@ body {
   height: 600px;
   text-align: left;
   position: relative;
-  /* z-index: 11; */
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  /* animation: fadeIn 0.3s ease-in-out; */
 }
 
 #login-body{
@@ -82,7 +80,6 @@ body {
   border: 1px solid black;
   border-radius: 5px;
   margin-bottom: 10px;
-
   position: relative;
   display: flex;
   justify-content: center; /* center the text */
@@ -336,8 +333,6 @@ body {
   border: none;
   padding: 5px;
   padding-top: 0;
-  /* width: 30px;
-  height: 30px; */
   font-size: 12px;
   font-weight: bold;
   cursor: pointer;
@@ -394,7 +389,6 @@ body {
 
 .details {
   display: flex;
-  /* justify-content: space-between; */
   gap: 10px;
   font-size: 14px;
   color: gray;
@@ -511,7 +505,6 @@ nav{
     display: none;
     position: absolute;
     top: 50px;
-    /* left: 0; */
     right: 0;
     width: 200px;
     background-color: white;
@@ -564,7 +557,6 @@ nav{
     background-color: white;
     border: 1px solid lightgray;
     border-radius: 50px;
-    /* box-shadow: 10px 10px 5px lightgray ; */
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     
 }
@@ -573,11 +565,7 @@ nav{
     padding: 13px 0;
     padding-right: 120px;
     padding-left: 30px;
-    
     text-align: left;
-    /* border-right: 1px solid grey;
-    margin: 5px 0; */
-    
 }
 
 
@@ -604,7 +592,6 @@ nav{
     padding-right: 5px;
     flex: 1;
     text-align: left;
-    
     width: 260px; 
     margin: 0;
   }
@@ -665,7 +652,6 @@ nav{
     align-items: center;
     justify-content: center;
     padding-top: 15px;
-    /* text-align: center; */
     font-family: Arial, sans-serif;
     font-size: 14px;
     font-weight: bold;
@@ -692,7 +678,7 @@ nav{
     
 }
 #resp-nav-item img{
-    height: 30px; /* Adjust icon size for smaller screens */
+    height: 30px; 
     width: auto;
     margin: auto;
 }
@@ -754,7 +740,6 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
-    
     position: relative;
     height: 80px; 
     width: 100vw; 
@@ -801,7 +786,6 @@ nav{
     flex: 1;
     text-align: left;
     gap: 15px;
-    /* width: 260px;  */
     margin: 0; 
 }
 .nav-item-sticky:nth-child(3) i{
@@ -817,7 +801,6 @@ nav{
     width: 40px;
     height: 40px;
     margin: auto;
-    /* margin-left: 100px; */
     margin-right: 5px;
 
 }
@@ -863,12 +846,8 @@ img{
 }
 
 .right{
-    /* float: right; */
     margin-left: auto;
 }
-
-
-
 
 table{
     width: 100%;
@@ -946,7 +925,6 @@ body{
 }
 
 .navbar{
-    /* display: flex; */
     position: relative;
 }
 
@@ -970,9 +948,7 @@ body{
 }
 
 .nav-item:hover{
-    /* background-color: #555; */
     text-decoration: underline;
-    
 }
 
 .content-container{
@@ -1040,99 +1016,7 @@ body{
     color: #ff385c;
 }
 
-
-
-
-/* CONTACT US PAGE STYLES */
-.nav-con{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 30px;
-    width: 100vw; 
-}
-#main-nav{
-    background-color:white ;
-    border-bottom: 1px solid #ccc;
-}
-
-
-
-/* LOGIN PAGE STYLES */
-
-#login-nav{
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: white;
-    border-bottom: 1px solid #ccc;
-}
-
-.login-nav-con{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 30px;
-    width: 100%; 
-}
-
-#login-page-header{
-    margin-bottom: 20px; 
-    text-align: center;
-    padding: 10px 0;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 0.5px solid #ccc;
-}
-
-
-#login-page-header h3{
-    text-align: center;
-}
-
-.login-page-content {
-  background: white;
-  border-radius: 10px;
-  width: 45%;
-  padding: 10px;
-  text-align: left;
-  margin: auto;
-  margin-top: 100px;
-  margin-bottom: 300px;
-  border: 1px solid #ddd;
-  border-radius: 20px;
-  
-}
-
-#login-page-body{
-    padding: 20px 20px;
-    height: 100%;
-}
-
-
-.button {
-  padding: 10px;
-  width: 100%;
-  color: #333;
-  background-color: white;
-  font-size: smaller;
-  font-weight: bold;
-  border: 1px solid black;
-  border-radius: 5px;
-  margin-bottom: 10px;
-
-  position: relative;
-  display: flex;
-  justify-content: center; /* center the text */
-  align-items: center;
-  padding: 12px 16px;
-  cursor: pointer;
-  font-family: sans-serif;
-}
-
-
+/* MEDIA QUERIES FOR RESPONSIVENESS */
 
 @media screen and (max-width: 1115px) {
     .gallery-item{
